@@ -1,3 +1,9 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+}
 
 body
 {
@@ -9,6 +15,7 @@ h1
     padding-left: 40px;
     color: #228CDB;
     padding-top: 10%;
+    
 }
 
 #quiz-container
@@ -25,7 +32,10 @@ h1
 #question-text
 {
     padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     font-size: 25px;
+
 }
 hr
 {
@@ -38,9 +48,10 @@ ul
     display: flex;
     flex-direction: column;
     padding-right: 40px;
+    padding-left: 40px;
 }
 
-ul li
+ul button
 {
     display: flex;
     list-style: none;
@@ -50,13 +61,21 @@ ul li
     border-radius: 5px;
     height: 35px;
     align-items: center;
-    padding-left: 10px;
     font-size: 20px;
+    padding-left: 10px;
+    cursor: pointer;
 }
 
-button
+ul button:hover
+{
+    background-color: #228CDB;
+}
+
+
+#next
 {
     margin-left: 40%;
+    margin-top: 15px;
     margin-bottom: 50px;
     width: 125px;
     height: 30px;
@@ -64,6 +83,9 @@ button
     background-color: #228CDB;
     color: #E8E9EB;
     font-size: 20px;
+    border-color: #228CDB;
+    display: none;
+   
     
 }
 
@@ -73,7 +95,6 @@ button
     margin: 0px 40px;
     height: 300px; 
     
-    
 }
 #cursor
 {
@@ -82,9 +103,8 @@ button
     
 }
 
-input
+ul::selection
 {
-    background-color: transparent;
-    border: 1px solid #228CDB;
-    margin-left: 15px;
+    background-color: red;
 }
+
