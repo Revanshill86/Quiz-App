@@ -107,10 +107,26 @@ ul button:hover
     background: #5DD39E;
 }
 
+@keyframes horizontal-shake 
+{
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
 .incorrect
 {
-    background-color: #AF1B3F;
+    background-color: #af1b407d;
+    border: 2px solid #AF1B3F;
+    animation: horizontal-shake 0.5s;
+   
 }
+
+
+
+
 
 
 
