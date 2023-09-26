@@ -102,5 +102,15 @@ ul button:hover
     
 }
 
+.correct
+{
+    background: #5DD39E;
+}
+
+.incorrect
+{
+    background-color: #AF1B3F;
+}
+
 
 
