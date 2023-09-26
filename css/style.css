@@ -86,7 +86,6 @@ ul button:hover
     border-color: #228CDB;
     display: none;
    
-    
 }
 
 .box
@@ -103,8 +102,5 @@ ul button:hover
     
 }
 
-ul::selection
-{
-    background-color: red;
-}
+
 
