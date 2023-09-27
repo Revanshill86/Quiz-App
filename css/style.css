@@ -25,7 +25,7 @@ h1
     margin: 0 auto;
     border-radius: 10px;
     color: #228CDB;
-    margin-top: 10%;  
+    margin-top: 25px;  
     padding-top: 25px;
 }
 
@@ -66,10 +66,17 @@ ul button
     cursor: pointer;
 }
 
-ul button:hover
+ul button:hover:not([disabled])
 {
     background-color: #228CDB;
 }
+
+
+ul button:disabled
+{
+    cursor: no-drop;
+}
+
 
 
 #next
@@ -85,7 +92,7 @@ ul button:hover
     font-size: 20px;
     border-color: #228CDB;
     display: none;
-   
+    
 }
 
 .box

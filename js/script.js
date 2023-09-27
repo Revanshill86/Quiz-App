@@ -40,7 +40,7 @@ const questionList = [
             { text: "Washington D.C.", correct: true},
             { text: "Washington State", correct: false},
             { text: "Texas", correct: false},
-            { text: "New York", correct: true},
+            { text: "New York", correct: false},
         ]
     },
 
@@ -51,7 +51,7 @@ const questionList = [
             { text: "Hamburg", correct: false},
             { text: "Berlin", correct: true},
             { text: "Munich", correct: false},
-            { text: "Cologne", correct: true},
+            { text: "Cologne", correct: false},
         ]
     },
 ];
@@ -114,11 +114,57 @@ function selectAnswer(e)
     if(isCorrect)
     {
         selectedBtn.classList.add('correct');
+        score++;
     }else
     {
         selectedBtn.classList.add('incorrect');
     }
+    Array.from(answerButton.children).forEach(button => 
+        {
+            if(button.dataset.correct === 'true')
+            {
+                button.classList.add('correct');
+            }
+            //prevent additional selection
+            button.disabled = true;
+        });
+
+        nextButton.style.display = 'inline-block';
+        
+        
 }
+
+function handleNextButton()
+{
+    currentQuestionIndex++
+    if(currentQuestionIndex < questionList.length)
+    {
+        showQuestion();
+    }else
+    {
+        showScore();
+    }
+}
+
+function showScore()
+{
+    resetState();
+    questionElement.innerHTML = `Your score is ${score} out of ${questionList.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = 'inline-block';
+}
+
+nextButton.addEventListener('click', () => {
+    if(currentQuestionIndex < questionList.length)
+    {
+        handleNextButton();
+    }else
+    {
+        startQuiz();
+    }
+});
+
+
 startQuiz();
 
 
