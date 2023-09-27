@@ -2,7 +2,7 @@
 
 ![Quiz App Screenshot](/img/demo.jpg)
 
-Live Site URL: [Quiz App Demo](https://your-quiz-app-url-here.com)
+Live Site URL: [Quiz App Demo](https://revanshill86.github.io/Quiz-App/)
 
 ## Description
 
